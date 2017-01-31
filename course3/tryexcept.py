@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-print(1 / 0)  # this will raise an exception
+# print(1 / 0)  # this will raise an exception
 
 # Basic try/except
 
@@ -14,12 +14,23 @@ try:
 except Exception:  # it is almost the same as just `except:`
     print('0!!')
 
+
+
+
+
+
 # Catching specific exceptions
 
 try:
     print(1 / 0)
 except ZeroDivisionError:
     print('Exception!')
+
+
+
+
+
+
 
 # Catching exception instance
 
@@ -28,6 +39,13 @@ try:
 except ZeroDivisionError as e:
     print('Exception! Stop it!')
     print(e)
+
+
+
+
+
+
+
 
 # Mismatched exception will not be captured
 
@@ -90,3 +108,11 @@ else:
     print('else')
 finally:
     print('finally')
+
+try:
+    raise ValueError()
+finally:
+    print('Finally!')
+
+
+

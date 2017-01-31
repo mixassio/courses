@@ -4,20 +4,20 @@
 # map
 
 def work(value):
-    return x * 2
+    return value * 2
 
 t = [1, 2, 10]
-m = map(t, work)
+m = map(work, t)
 print(m)
 
 # The same, but using lambda function
-m1 = map(t, lambda x: x * 2)
-print(m1)
+m1 = map(lambda x: x * 2, t)
+print(list(m1))
 
 
 # filter
 
-print(filter([-1, -5, -9, 20, 3, 0], lambda v: v > 0))
+print(list(filter(lambda v: v > 0, [-1, -5, -9, 20, 3, 0])))
 
 
 # reduce
