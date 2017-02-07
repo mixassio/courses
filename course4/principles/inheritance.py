@@ -12,8 +12,6 @@ class Parent(object):
 
 class Child(Parent):
     def __init__(self):
-        super().__init__()
-
         print('Child inited')
         self.value = 'Child'
 

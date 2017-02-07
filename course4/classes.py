@@ -9,7 +9,6 @@ class Car:
 c = Car()
 print(c, type(c))
 
-
 # Classes can have variables called fields
 
 class Room:
@@ -34,9 +33,13 @@ class Door:
     def open(self):  # note that `self` is the object itself!
         print('self is', self)
         print('Door is opened!')
+        self.opened = True
 
 d = Door()
 d.open()
+
+d1 = Door()
+d1.open()
 
 
 # Methods can accept params
