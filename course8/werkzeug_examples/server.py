@@ -6,4 +6,4 @@ def application(request):
 
 if __name__ == '__main__':
     from werkzeug.serving import run_simple
-    run_simple('localhost', 4000, application)
+    run_simple('127.0.0.1', 4000, application)

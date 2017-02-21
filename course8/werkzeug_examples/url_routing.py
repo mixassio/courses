@@ -21,7 +21,7 @@ def application(environ, start_response):
     except HTTPException as e:
         return e(environ, start_response)
     start_response('200 OK', [('Content-Type', 'text/plain')])
-    return ['Rule points to %r with arguments %r' % (endpoint, args)]
+    return [b'Rule points to %r with arguments %r' % (endpoint, args)]
 
 if __name__ == '__main__':
     from werkzeug.serving import run_simple

@@ -28,7 +28,12 @@ def home():
         print(request.form)
         form = ContactForm(request.form)
         print(form.validate())
-        return ('valid', 200) if form.validate() else ('invalid', 400)
+
+        if form.validate():
+            return ('valid', 200)
+        else:
+            return ('invalid', 400)
+
     return 'hello world!', 200
 
 if __name__ == '__main__':
