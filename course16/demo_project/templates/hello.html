@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+My var is {{ my_var }}
+
+{% for item in my_var %}
+    <p>Item is: {{ item }}</p>
+{% endfor %}
+
+{% if True %}
+    <p>Show this message</p>
+{% else %}
+    <p>This will never be shown</p>
+{% endif %}
+
+</body>
+</html>
